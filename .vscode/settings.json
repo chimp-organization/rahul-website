@@ -1,4 +1,10 @@
 {
     "editor.defaultFormatter": "astro-build.astro-vscode",
     "editor.formatOnSave": true,
+    "tailwindCSS.includeLanguages": {
+    "astro": "html"
+    },
+    "editor.quickSuggestions": {
+    "strings": true
+    }
 }

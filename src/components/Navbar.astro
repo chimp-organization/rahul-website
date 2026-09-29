@@ -1,1 +1,16 @@
-<nav>Navbar</nav>
+---
+import { ThemeToggle } from '@/components/starwind/theme-toggle';
+---
+
+<nav class="flex items-center gap-2 px-2 justify-start">
+  <div>
+    <h1 class="text-xl font-extrabold">Navbar</h1>
+  </div>
+  <div class="flex items-center gap-4 grow">
+    <a href="/about">About</a>
+    <a href="/test">Test</a>
+  </div>
+  <div>
+    <ThemeToggle ariaLabel="Toggle theme" />
+  </div>
+</nav>

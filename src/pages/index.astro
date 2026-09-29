@@ -2,6 +2,7 @@
 import SocialCard from '../components/SocialCard.astro';
 import Layout from '../layouts/Layout.astro';
 import socialData from '../content/social.json';
+import Button from '@/components/starwind/button/Button.astro';
 ---
 
 <Layout
@@ -10,7 +11,25 @@ import socialData from '../content/social.json';
 >
   <h1 class="text-2xl font-extrabold">Hello World</h1>
   <a href="/about">About</a>
+
+  {/* REMOVED onclick="handleClick" and ADDED an identifier class/id */}
+  <Button
+    id="alert-btn"
+    variant="primary"
+    size="sm"
+    class="rounded-sm px-1 py-2 mx-2">Click me</Button
+  >
+
   <div class="m-2 p-2 flex items-center gap-2 flex-wrap">
     {socialData.socials.map((social, index) => <SocialCard {...social} />)}
-  </div></Layout
->
+  </div>
+</Layout>
+
+<script>
+  // Target the element securely in the client-side bundle
+  const button = document.getElementById('alert-btn');
+
+  button?.addEventListener('click', () => {
+    alert('Button clicked');
+  });
+</script>

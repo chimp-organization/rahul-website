@@ -1,8 +1,11 @@
 ---
+import '@/styles/starwind.css';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import '../styles/global.css';
 import Metadata from './Metadata.astro';
+import { ThemeInitScript } from '@starwind-ui/astro/theme';
+import '@/styles/starwind.css';
 
 import type { Metadata as MetadataType } from '../types/metadata';
 
@@ -14,6 +17,7 @@ const { ...metadataProps } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <ThemeInitScript />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

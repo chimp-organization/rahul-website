@@ -1,0 +1,20 @@
+---
+import Item from '@/components/starwind/item/Item.astro';
+import ItemContent from '@/components/starwind/item/ItemContent.astro';
+import ItemDescription from '@/components/starwind/item/ItemDescription.astro';
+import ItemTitle from '@/components/starwind/item/ItemTitle.astro';
+import Layout from '@/layouts/Layout.astro';
+import SheetDemo from '@/components/SheetDemo.astro';
+---
+
+<Layout title="test" description="">
+  <h1>Test Page</h1>
+  <div>
+    <Item class="max-w-3/5 mx-auto" size="sm" aria-label="Item">
+      <ItemTitle>Authorized</ItemTitle>
+      <ItemDescription>User Authorised</ItemDescription>
+      <ItemContent />
+    </Item>
+    <SheetDemo />
+  </div>
+</Layout>

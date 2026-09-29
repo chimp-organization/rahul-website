@@ -1,6 +1,6 @@
 export interface Metadata {
   title: string;
-  description: string;
+  description?: string;
   author?: string;
   developer?: string;
 }
