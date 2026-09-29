@@ -1,0 +1,19 @@
+{
+    "socials": [
+        {
+            "title": "Snapchat",
+            "href": "https://www.snapchat.com/@rahuld8435",
+            "description": "Snapchat"
+        },
+        {
+            "title": "GitHub",
+            "href": "https://deepaksy.github.io",
+            "description": "Github link"
+        },
+        {
+            "title": "Instagram",
+            "href": "http",
+            "description": "instagram link"
+        }
+    ]
+}

@@ -1,11 +1,16 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import SocialCard from '../components/SocialCard.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import socialData from '../content/social.json';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Layout
+  title="Rahul Dahariya"
+  description="Portfolio website for rahul dahariya"
+>
+  <h1 class="text-2xl font-extrabold">Hello World</h1>
+  <a href="/about">About</a>
+  <div class="m-2 p-2 flex items-center gap-2 flex-wrap">
+    {socialData.socials.map((social, index) => <SocialCard {...social} />)}
+  </div></Layout
+>
