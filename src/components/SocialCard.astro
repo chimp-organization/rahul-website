@@ -1,6 +1,14 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import Layout from '../layouts/Layout.astro';
+import { Button } from '@/components/starwind/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/starwind/card';
 
 interface Props extends HTMLAttributes<'a'> {
   title: string;
@@ -15,13 +23,18 @@ const {
 } = Astro.props;
 ---
 
-<a
-  class:list={['cursor-pointer m-2 p-2', className]}
-  href={href}
-  target={target}
->
-  <div {...props}>
-    {title && <h1 class="text-2xl font-bold">{title}</h1>}
-    <img src="" alt="image" />
-  </div>
-</a>
+<Card size="sm" class="mx-auto w-full max-w-sm">
+  <CardHeader>
+    <CardTitle>Small Card</CardTitle>
+    <CardDescription>This card uses the small size variant.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>
+      The card component supports a size prop that can be set to "sm" for a more
+      compact appearance.
+    </p>
+  </CardContent>
+  <CardFooter>
+    <Button variant="outline" size="sm" class="w-full">Action</Button>
+  </CardFooter>
+</Card>
